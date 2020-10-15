@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Lesson 3</title>
+</head>
+<body>
+
+    <script>
+
+        // 1
+        let i = 0
+        while (i < 101) {
+               alert(i)
+            i++
+        }
+
+        // 2
+
+        /* let order = [ [name_1,price_1,quantity_1],
+                      [name_2,price_2,quantity_2]
+                    ]
+        */
+
+        let order = [ ['Куртка', 3690, 2],
+                      ['Свитер', 1450, 3],
+                      ['Брюки', 2600, 1]
+                    ]
+
+        function countBasketPrice(arr) {
+            let sum = 0
+            
+            for (i = 0; i < arr.length; i++) {
+                 sum += arr[i][1]*arr[i][2]
+            }
+                
+            alert(sum)
+
+        }
+
+
+        countBasketPrice(order)
+
+
+    </script>
+</body>
+</html>
