@@ -8,11 +8,27 @@
     <script>
 
         // 1
-        let i = 0
-        while (i < 101) {
-               alert(i)
-            i++
+        let number = 1;
+        let numberArr = [];
+
+        while (number <= 100) {
+            if (number == 1) {
+                numberArr.push(1)
+            } else {
+                let result = 2;
+                let i = 2;
+                while (number % i !== 0 ){
+                    i += 1;
+                    result +=1;
+                } 
+                if (result == number) {
+                    numberArr.push(result);
+            }
         }
+        number += 1;
+    }
+
+    console.log(numberArr);
 
         // 2
 
