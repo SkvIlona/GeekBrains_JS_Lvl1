@@ -1,0 +1,96 @@
+/* 1 */
+
+.chess {
+    width: 100%;
+    height: 100vh;
+}
+
+.colomn_left, .colomn_right, .colomn {
+    display: inline-block;
+    
+    width: 10%;
+    height: 100%;
+}
+
+.colomn_left, .colomn_right {
+    position: relative;
+    top: -100px;
+}
+
+.stroke_number, .cell_name {
+    background-color: chocolate;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    width: 100%;
+    height: 10%;
+}
+
+.cell_white {
+    background-color: blanchedalmond;
+    border: 1px solid black;
+    width: 100%;
+    height: 10%;
+}
+
+.cell_black {
+    background-color: black;
+    border: 1px solid black;
+    width: 100%;
+    height: 10%;
+}
+
+/* 2 */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid  {
+  padding: 0!important;
+  height: 100vh;
+  background-color: #FFFFF0;
+}
+
+.list-of-all-products, .order-list {
+    width: 45%;
+    border: 3px solid #E9967A;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+.list-of-all-products {
+    margin-left: 2.5%;
+}
+
+.order-list {
+    margin-left: 5%;
+}
+
+.title-list-of-all-products, .title-order-list {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.buy-product {
+    margin-left: 5px;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.name-product, .price-product {
+    display: inline-block;
+    margin-top: 5px;
+    width: 40%;
+    text-align: center;
+}
+
+.my-btn-buy {
+    display: inline-block;
+    padding: 10px;
+}
+
+

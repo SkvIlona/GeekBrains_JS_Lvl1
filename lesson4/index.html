@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Lesson 4</title>
+</head>
+<body>
+
+    <script>
+
+        // 1
+        
+        let number_object = {
+          number: '',
+          units: 0,
+          tens: 0,
+          hundreds: 0, 
+        }
+
+        function task1() {
+
+            number_object.number = prompt('Введите число от 1 до 999')
+            
+            if (number_object.number >= 1 && number_object.number <= 999) {
+                if (number_object.number <= 9) {
+                    number_object.units = Math.floor(number_object.number % 10)                     
+                    alert(`Единицы = ${number_object.units}`)
+                } else if (number_object.number <= 99) {
+                    number_object.units = Math.floor(number_object.number % 10) 
+                    number_object.tens = Math.floor(number_object.number / 10 % 10);
+                    alert(`Единицы = ${number_object.units} Десятки = ${number_object.tens}`)
+                } else {
+                    number_object.units = Math.floor(number_object.number % 10) 
+                    number_object.tens = Math.floor(number_object.number / 10 % 10);
+                    number_object.hundreds = Math.floor(number_object.number / 100 % 10);
+                    alert(`Единицы = ${number_object.units} Десятки = ${number_object.tens} Сотни = ${number_object.hundreds}`)
+                    
+                }
+            
+            } else {
+                    alert('Вы ввели неверное число.')
+                    task1()
+
+                }
+
+        }
+
+        task1()
+            
+        
+        // 2
+
+        class Order_item {
+            name_product = ''
+            price_product = ''
+            quantity_product = ''
+
+            constructor (name_product, price_product, quantity_product) {
+                this.name_product = name_product
+                this.price_product = price_product
+                this.quantity_product = quantity_product
+            }
+        }
+
+        class Order {
+            order_list = new Array()
+
+            constructor (order_item) {
+                this.order_list.push(order_item)
+            }
+
+            add(order_item) {
+                this.order_list.push(order_item)
+            }
+
+
+            total_price() {
+                let total_price = this.order_list.reduce(function (price, current) {
+                    return price + current.price_product*current.quantity_product;
+                },0)    
+              return total_price  
+            }
+        }
+
+        let Order1 = new Order(new Order_item('Юбка','3650','2')) 
+        Order1.add(new Order_item('Брюки','7200','3'))
+        Order1.add(new Order_item('Блуза','1400','1'))
+        let s = Order1.total_price()
+        console.log(s)
+        
+
+
+    </script>
+</body>
+</html>
