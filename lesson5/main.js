@@ -43,8 +43,8 @@ class Order {
 let Order1 = new Order(new Order_item('Юбка','3650','2')) 
 Order1.add(new Order_item('Брюки','7200','3'))
 Order1.add(new Order_item('Блуза','1400','1'))
-/*let s = Order1.total_price()
-console.log(s)*/
+let s = Order1.total_price()
+console.log(s)
 
 const order = document.querySelector('.order')
 
